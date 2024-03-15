@@ -18,9 +18,6 @@ exports.createPost = async (req,res) => {
         });
     }
 };
-
-
-//need some more testing after completing like wala controleer
 exports.getAllPosts = async (req,res) => {
     try {
         const posts = await Post.find().populate("likes").populate("comments").exec();
